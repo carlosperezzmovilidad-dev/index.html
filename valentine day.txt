@@ -1,0 +1,95 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 ¿Quieres ser mi Valentine Day Abigail Cedillo? 💕</title>
+    <link rel="stylesheet" href="style.css">
+  
+<style>
+    .particle {
+        --end-x: 0px;
+        --end-y: -100px;
+    }
+    
+    @keyframes particleFloat {
+        0% {
+            opacity: 1;
+            transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(var(--end-x), var(--end-y)) scale(1.5) rotate(360deg);
+        }
+    }
+</style></head>
+<body>
+    <!-- Pantalla de inicio con lluvia de corazones -->
+    <div id="heartRain" class="screen" style="opacity: 0; transform: scale(0.95);">
+        <div class="title-container">
+            <h1 class="pixel-title">💕 VALENTINE 💕</h1>
+            <p class="pixel-subtitle">Presiona cualquier tecla para comenzar...</p>
+        </div>
+        <canvas id="heartCanvas" width="1365" height="911"></canvas>
+    </div>
+
+    <!-- Animación del yorkie corriendo -->
+    <div id="yorkieScene" class="screen" style="opacity: 0; transform: scale(0.95);">
+        <div class="game-container">
+            <div class="yorkie-wrapper" style="left: 2120px;">
+                <div class="yorkie" id="yorkie">
+                    <div class="ear left"></div>
+                    <div class="ear right"></div>
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                    <div class="nose"></div>
+                    <div class="leg front-left" style="transform: translateY(0px);"></div>
+                    <div class="leg front-right" style="transform: translateY(-8px);"></div>
+                    <div class="leg back-left" style="transform: translateY(-8px);"></div>
+                    <div class="leg back-right" style="transform: translateY(0px);"></div>
+                    <div class="tail" style="transform: rotate(-20.9071deg);"></div>
+                </div>
+                <div class="ground"></div>
+            </div>
+            <div class="clouds">
+                <div class="cloud cloud1"></div>
+                <div class="cloud cloud2"></div>
+                <div class="cloud cloud3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de pregunta -->
+    <div id="questionScreen" class="screen active" style="opacity: 1; transform: scale(1);">
+        <div class="question-container">
+            <div class="question-box">
+                <h2 class="question-text">¿Quieres ser mi Valentine Abigail Cedillo?</h2>
+                <div class="buttons-container">
+                    <button id="yesBtn" class="game-btn yes-btn" style="position: relative;">SÍ</button>
+                    <span id="noBtn-placeholder" style="visibility: hidden; width: 140px; height: 76px; display: inline-block;"></span><button id="noBtn" class="game-btn no-btn absolute" style="position: absolute; transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); left: 360.763px; top: 60.303px; transform: rotate(0deg) scale(1); box-shadow: rgb(0, 0, 0) 0px 8px 0px, rgba(0, 0, 0, 0.3) 0px 12px 20px;">NO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de respuesta positiva -->
+    <div id="successScreen" class="screen">
+        <div class="success-container">
+            <div class="success-box">
+                <h2 class="success-title">¡Gracias por aceptar! 💕</h2>
+                <p class="success-message">Eres la mejor persona del mundo y me haces muy feliz, Esposa mia.</p>
+                <p class="success-message">¡Te amo infinitamente! 💖</p>
+                <div class="hearts-celebration">
+                    <span class="heart-emoji">💕</span>
+                    <span class="heart-emoji">💖</span>
+                    <span class="heart-emoji">💗</span>
+                    <span class="heart-emoji">💝</span>
+                    <span class="heart-emoji">💞</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+</body></html>
