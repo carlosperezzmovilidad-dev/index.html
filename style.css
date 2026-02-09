@@ -262,7 +262,7 @@ body {
             #A0826D 20px,
             #A0826D 40px
         );
-    border-top: 4px solid #6B5D4F;
+    border-top: 4px solid #ffd700;
     animation: groundMove 0.5s linear infinite;
 }
 
@@ -594,4 +594,5 @@ body {
         flex-direction: column;
     }
 }
+
 
